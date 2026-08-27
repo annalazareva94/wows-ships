@@ -1,0 +1,72 @@
+@font-face {
+  font-family:RobotoCondensed;
+  src:url(./fonts/RobotoCondensed-Regular.woff2)format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: RobotoCondensed, sans-serif;
+    background-color: #1c2531;
+    position: relative;
+    background-image: url('./img/default-pattern.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.15);
+}
+
+.filter-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.6)' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 24px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-search,
+.filter-reset,
+.filter-select {
+    display: flex;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1019607843), 0 0 2px rgba(0, 0, 0, 0.2509803922) inset;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 24px;
+    color: rgba(255, 255, 255, 0.8);
+    --button-transparent-5: rgba(255, 255, 255, 0.24);
+    border: 1px solid var(--button-transparent-5);
+    transition: background-color 0.3s ease;
+    max-width: 160px;
+    width: 100%;
+}
+
+.filter-reset,
+.filter-select {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
